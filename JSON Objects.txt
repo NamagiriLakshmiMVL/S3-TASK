@@ -1,0 +1,20 @@
+1. Compare Two JSON properties without order:
+
+let obj1 = { "name": "test",age: 25}
+let obj2 = { "name": "test"}
+
+
+let temp = Object.keys(obj1).length;
+let temp1 = Object.keys(obj2).length;
+console.log(temp,temp1)
+if(temp !== temp1){
+    console.log("not equal")
+} else {
+let count = 0;
+for(let i in obj1){
+    if(obj1[i] === obj2[i]){
+        count++;
+    }
+}
+console.log(count === temp ? "equal" : "not-equal");
+}

@@ -1,0 +1,10 @@
+CODING:
+
+     const req = new XMLHttpRequest();
+     req.addEventListener("load", function () {
+     let obj = JSON.parse(this.response)
+     for (let val of obj)
+        console.log(val.flags.png)
+     });
+     req.open("GET","https://restcountries.com/v3.1/all");
+     req.send();

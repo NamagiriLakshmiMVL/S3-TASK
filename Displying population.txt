@@ -1,0 +1,11 @@
+3. //DISPLAYING POPULATION
+
+const req = new XMLHttpRequest();
+req.addEventListener("load", function () {
+   let obj = JSON.parse(this.response)
+  // console.log(obj)
+  for (let val of obj)
+  console.log(val.population)
+});
+req.open("GET","https://restcountries.com/v3.1/all");
+req.send();
